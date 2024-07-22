@@ -1,17 +1,28 @@
-interface Vehicle {
-  name: string,
-  year: number,
-  broken: ConstrainBoolean
+interface Reportable {
+  summary(): string
 }
 
 const oldCivic = {
   name: "Civic",
   year: 2000,
-  broken: true
+  broken: true,
+  summary() {
+    return `Name: ${this.name}`
+  }
 }
 
-const printVehicle = (vehicle: Vehicle): void => {
-  console.log(`Name: ${vehicle.name}`);
-  console.log(`Year: ${vehicle.year}`);
-  console.log(`Broken?: ${vehicle.broken}`);
+const drink = {
+  color: "brown",
+  carbonated: true,
+  sugar: 40,
+  summary() {
+    return `My drink has ${this.sugar} grams of sugar`
+  }
 }
+
+const printSummary = (item: Reportable): void => {
+  console.log(item.summary())
+}
+
+printSummary(oldCivic)
+printSummary(drink)
