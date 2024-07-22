@@ -1,6 +1,7 @@
 const add = (a: number, b: number): number => {
   return a + b;
 };
+// ANNOTATE ARGUMENTS AND RETURN VALUES
 // There is no type inference for arguments
 // We always have to use type annotations
 // Type inference works for output but we should explicitly use annotations, in case we forget return statement or return incorrect type

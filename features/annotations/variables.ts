@@ -1,3 +1,5 @@
+// WITH VARIABLES WE WILL RELY ON TYPE INFERENCE AS MUCH AS WE CAN
+
 // Primitive data types
 let apples: number = 5;
 let speed: string = "fast";
