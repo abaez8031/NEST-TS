@@ -26,3 +26,8 @@ const printSummary = (item: Reportable): void => {
 
 printSummary(oldCivic)
 printSummary(drink)
+
+// General strategy for reusable code in Typescript
+
+// Create functions that accept arguments that are typed with interfaces
+// Objects/Classes can decide to implement a given interface to work with a function
