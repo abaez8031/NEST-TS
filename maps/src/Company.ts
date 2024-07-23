@@ -2,18 +2,18 @@ import { faker } from "@faker-js/faker";
 
 export class Company {
   companyName: string;
-  catchphrase: string;
+  catchPhrase: string;
   location: {
     lat: number;
     lng: number;
   };
 
   constructor() {
-    this.companyName = faker.company.companyName()
-    this.catchphrase = faker.company.catchPhrase()
+    this.companyName = faker.company.name();
+    this.catchPhrase = faker.company.catchPhrase();
     this.location = {
       lat: parseFloat(faker.address.latitude()),
-      lng: parseFloat(faker.address.longitude())
-    }
+      lng: parseFloat(faker.address.longitude()),
+    };
   }
 }
