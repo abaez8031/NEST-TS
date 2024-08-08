@@ -23,7 +23,8 @@ export class AuthService {
     const result = salt + '.' + hash.toString('hex');
 
     // Create and store the new user
-    return this.usersService.create(email, password);
+    const user = await this.usersService.create(email, result);
+    return user;
   }
   signin() {}
 }
