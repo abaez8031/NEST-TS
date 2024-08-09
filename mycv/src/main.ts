@@ -9,7 +9,7 @@ async function bootstrap() {
     cookieSession({
       keys: ['asdfasfd'],
     }),
-);
+  );
   app.useGlobalPipes(
     new ValidationPipe({
       whitelist: true,
